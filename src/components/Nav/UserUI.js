@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
-import { Link, useHistory, Redirect } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import CreateReview from "../Reviews/CreateReview";
 
@@ -132,30 +132,36 @@ const UserUI = (props) => {
         onMouseLeave={handleClose}
         className={classes.menu}
       >
-        <MenuItem onClick={handleClose}>
-          <CardHeader
-            style={{ paddingLeft: 0 }}
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                <img
-                  src={currentUser.photoURL}
-                  alt=""
-                  style={{ height: 40, width: "100%", objectFit: "cover" }}
-                />
-              </Avatar>
-            }
-            title={
-              <Typography variant="h5" className={classes.neckText}>
-                {currentUser.displayName}
-              </Typography>
-            }
-            subheader={
-              <Typography variant="p" className={classes.neckText2}>
-                {currentUser.email}
-              </Typography>
-            }
-          />
-        </MenuItem>
+        <Link
+          variant="button"
+          className={classes.link}
+          to={`/u/${currentUserProfile && currentUserProfile.username}`}
+        >
+          <MenuItem onClick={handleClose}>
+            <CardHeader
+              style={{ paddingLeft: 0 }}
+              avatar={
+                <Avatar aria-label="recipe" className={classes.avatar}>
+                  <img
+                    src={currentUser.photoURL}
+                    alt=""
+                    style={{ height: 40, width: "100%", objectFit: "cover" }}
+                  />
+                </Avatar>
+              }
+              title={
+                <Typography variant="h5" className={classes.neckText}>
+                  {currentUser.displayName}
+                </Typography>
+              }
+              subheader={
+                <Typography variant="p" className={classes.neckText2}>
+                  {currentUser.email}
+                </Typography>
+              }
+            />
+          </MenuItem>
+        </Link>
         <Divider
           style={{
             marginTop: "0px",
@@ -200,6 +206,7 @@ const UserUI = (props) => {
         />
 
         <MenuItem onClick={handleLogout}>
+          {" "}
           <Typography variant="p" className={classes.neckText2}>
             Logout
           </Typography>

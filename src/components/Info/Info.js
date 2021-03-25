@@ -1,6 +1,5 @@
-import React, { useState, useRef } from "react";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   Grid,
   Card,

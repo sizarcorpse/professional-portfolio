@@ -118,21 +118,21 @@ export default function Contents() {
           }
           {...a11yProps(3)}
         />
-        <Tab
+        {/* <Tab
           label={
             <Typography variant="h5" className={classes.neckText2}>
               Events
             </Typography>
           }
           {...a11yProps(4)}
-        />
+        /> */}
         <Tab
           label={
             <Typography variant="h5" className={classes.neckText2}>
               Contact
             </Typography>
           }
-          {...a11yProps(5)}
+          {...a11yProps(4)}
         />
       </Tabs>
 
@@ -148,10 +148,10 @@ export default function Contents() {
       <TabPanel value={value} index={3}>
         <PhotoGallery />
       </TabPanel>
-      <TabPanel value={value} index={4}>
+      {/* <TabPanel value={value} index={4}>
         Events
-      </TabPanel>
-      <TabPanel value={value} index={5}>
+      </TabPanel> */}
+      <TabPanel value={value} index={4}>
         <Info />
       </TabPanel>
     </div>

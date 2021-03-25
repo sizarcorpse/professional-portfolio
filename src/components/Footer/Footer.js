@@ -48,7 +48,7 @@ const Footer = ({ width }) => {
           <Box display="flex" flexDirection="row" flexGrow={1} margin="auto">
             <Typography className={classes.neckText}>
               {" "}
-              💀 2020, SizarCorpse
+              💀 2021, sizar
             </Typography>
             <Typography className={classes.neckText}> License</Typography>
             <Typography className={classes.neckText}> Terms</Typography>

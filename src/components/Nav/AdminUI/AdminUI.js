@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import AccountPopupMenu from "./AccountPopupMenu";
 import CreateContentPopupMenu from "./CreateContentPopupMenu";
 
-import clsx from "clsx";
 import { navMui } from "../muiNav";
 import withWidth from "@material-ui/core/withWidth";
 import { withStyles } from "@material-ui/core/styles";
@@ -19,7 +18,6 @@ import {
   Hidden,
 } from "@material-ui/core";
 
-import RemoveFromQueueIcon from "@material-ui/icons/RemoveFromQueue";
 import HomeIcon from "@material-ui/icons/Home";
 import MailIcon from "@material-ui/icons/Mail";
 import AppsIcon from "@material-ui/icons/Apps";
@@ -82,7 +80,7 @@ const AdminUI = (props) => {
                 </Hidden>
               </Button>
 
-              <Link
+              {/* <Link
                 variant="button"
                 to={"/admin"}
                 className={classes.navBarApp}
@@ -90,7 +88,7 @@ const AdminUI = (props) => {
                 <Badge aria-label="delete">
                   <RemoveFromQueueIcon style={{ color: "#132743" }} />
                 </Badge>
-              </Link>
+              </Link> */}
 
               <Link
                 variant="button"

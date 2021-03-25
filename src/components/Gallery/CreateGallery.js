@@ -16,7 +16,7 @@ import { useSnackbar } from "notistack";
 
 // #material-ui :
 import clsx from "clsx";
-import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
+import withWidth from "@material-ui/core/withWidth";
 import { withStyles } from "@material-ui/core/styles";
 import { MuiDistributor } from "../../muiTheme/MuiDistributor";
 // import addlogo from "../../assets/add.jpg";

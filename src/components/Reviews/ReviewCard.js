@@ -243,8 +243,7 @@ const ReviewCard = (props) => {
                   classes.ScuiMenuSmallPaddingReview
                 )}
               >
-                {review.reviewerID === currentUser.uid ||
-                currentUser.admin === true ? (
+                {review.reviewerID === currentUser.uid ? (
                   <>
                     <MenuItem onClick={handleOpenModel}>
                       <Typography variant="h5">Update</Typography>
@@ -268,6 +267,16 @@ const ReviewCard = (props) => {
                         </div>
                       </Fade>
                     </Modal>
+                    <MenuItem
+                      onClick={() => {
+                        deleteReview(review.reviewID, review.reviewerID);
+                      }}
+                    >
+                      <Typography variant="h5">Delete</Typography>
+                    </MenuItem>
+                  </>
+                ) : currentUser.admin === true ? (
+                  <>
                     <MenuItem
                       onClick={() => {
                         deleteReview(review.reviewID, review.reviewerID);

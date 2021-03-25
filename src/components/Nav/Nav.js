@@ -1,6 +1,5 @@
 import React from "react";
 import { useAuth } from "../../contexts/AuthContext";
-import { Link, useHistory, Redirect } from "react-router-dom";
 
 import UserUI from "./UserUI";
 import AdminUI from "./AdminUI/AdminUI";

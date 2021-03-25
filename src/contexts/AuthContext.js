@@ -1,8 +1,7 @@
 import React, { useContext, createContext, useState, useEffect } from "react";
 
-import app, { auth, provider } from "../firebase";
+import app, { auth } from "../firebase";
 
-import { useHistory } from "react-router-dom";
 import { useSnackbar } from "notistack";
 
 const AuthContext = createContext();
@@ -16,8 +15,6 @@ export function AuthProvider({ children }) {
   const [currentUserProfile, setCurrentUserProfile] = useState();
   const { enqueueSnackbar } = useSnackbar();
   const [loading, setLoading] = useState(true);
-
-  const history = useHistory();
 
   function signup(email, password, firstName, lastName, username) {
     const db = app.firestore();

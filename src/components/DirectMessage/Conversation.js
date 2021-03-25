@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { Formik, Form } from "formik";
+import React, { useEffect, useState } from "react";
+
 import { withStyles } from "@material-ui/core/styles";
 import { v4 as uuidv4 } from "uuid";
 import { useAuth } from "../../contexts/AuthContext";
@@ -103,6 +102,3 @@ const Conversation = (props) => {
 };
 
 export default withStyles(conversationMui)(Conversation);
-
-//EOcaBSskqLeapjq59bSD3XXzi853
-//9jpkGFX4qDhTq7OsPLavTAiyiuk2
